@@ -1,1 +1,1 @@
-# sample
+# sample spring boot application
