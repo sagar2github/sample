@@ -60,7 +60,7 @@ jobs:
         run: |
           docker stop sample-app || true
           docker rm sample-app || true
-          docker run -d --name sample-app -p 8085:8085 sagar2docker/sample:latest
+          docker run -d --name sample-app -p 8085:8080 sagar2docker/sample:latest
 
 
       # - name: Set KUBECONFIG
