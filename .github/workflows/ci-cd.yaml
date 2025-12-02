@@ -57,14 +57,14 @@ jobs:
         run: docker push $DOCKER_USERNAME/sample:latest
 
       - name: Set KUBECONFIG
-        run: |
-          export KUBECONFIG=/root/.kube/config
-          kubectl config use-context minikube
+        run: sudo kubectl config use-context minikube
 
       # 🔟 Apply Kubernetes manifests
       - name: Deploy to Minikube
-        run: kubectl apply -f k8s/deployment.yaml
+        run: |
+          sudo kubectl apply -f k8s/deployment.yaml
+          sudo kubectl apply -f k8s/service.yaml
 
       # 1️⃣1️⃣ Restart Deployment to ensure new image is used
       - name: Restart Deployment
-        run: kubectl rollout restart deployment/sample-app
+        run: sudo kubectl rollout restart deployment/sample-app
