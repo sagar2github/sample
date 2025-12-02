@@ -1,21 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome Page</title>
-    <style>
-        body {
-            background: #f2f2f2;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 120px;
-        }
-        h1 {
-            font-size: 48px;
-            color: #333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #f5f6fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .container {
+      padding: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin: 10px 0;
+      color: #4CAF50;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to My Java Sample Application!</h1>
+
+  <header>
+    <h1>Welcome to My Sample Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/dashboard-layout.png" alt="Dashboard Icon">
+      <h2>Dashboard</h2>
+      <p>Overview of key metrics and performance indicators.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/analytics.png" alt="Analytics Icon">
+      <h2>Analytics</h2>
+      <p>Detailed analysis of user activity and data trends.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/settings.png" alt="Settings Icon">
+      <h2>Settings</h2>
+      <p>Manage your preferences, profile, and application settings.</p>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/000000/cloud.png" alt="Cloud Icon">
+      <h2>Cloud</h2>
+      <p>Integration with cloud services and deployments.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 My Sample Application. All rights reserved.
+  </footer>
+
 </body>
 </html>
