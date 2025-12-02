@@ -56,9 +56,10 @@ jobs:
       - name: Push Docker Image
         run: docker push $DOCKER_USERNAME/sample:latest
 
-      # 9️⃣ Set kubectl context to Minikube
-      - name: Set kubectl context
-        run: kubectl config use-context minikube
+      - name: Set KUBECONFIG
+        run: |
+          export KUBECONFIG=/root/.kube/config
+          kubectl config use-context minikube
 
       # 🔟 Apply Kubernetes manifests
       - name: Deploy to Minikube
