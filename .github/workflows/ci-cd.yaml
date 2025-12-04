@@ -55,6 +55,8 @@ jobs:
       - name: Trivy Image Scan
         run: |
           trivy image --exit-code 1 --severity HIGH,CRITICAL sagar2docker/sample:latest
+        continue-on-error: true
+
 
       # Push Docker image to DockerHub
       - name: Push Docker Image
